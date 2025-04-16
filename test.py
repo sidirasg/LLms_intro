@@ -1,4 +1,8 @@
 from llama_cpp import Llama
+from database import db_config_
+
+# Load DB credentials
+user, password, host, port, dbname = db_config_()
 
 # Load the model but first you have to download
 llm = Llama(model_path="C:/LLMS_DEV/Model/Meta-Llama-3-8B-Instruct.Q2_K.gguf", n_ctx=2048)
